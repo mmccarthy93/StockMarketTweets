@@ -19,12 +19,7 @@ api = tweepy.API(auth)
 max_number_of_tweets_to_be_extracted = int(input('Enter the number of tweets that you want to extract: '))
 
 # Mention the hashtag that you want to look out for
-ticker = input('Enter the hastag that you want to scrape for: ')
-"""
-for tweet in tweepy.Cursor(api.search, q='#' + ticker, rpp=100).items(max_number_of_tweets_to_be_extracted):
-    with open('tweets_with_hashtag_' + hashtag + '.txt', 'a') as the_file:
-        the_file.write(str(tweet.text.encode('utf-8')) + '\n')
-"""
+ticker = input('Enter the stock ticker that you want to scrape for: ')
 
 # Function scrapes twitter API to look for tweets that have specific ticker symbol based on user input.
 def getTweets():
